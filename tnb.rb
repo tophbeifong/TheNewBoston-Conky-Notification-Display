@@ -6,8 +6,8 @@ require 'mechanize'
 # Between the quot's :)
 #
 
-EMAIL = "peterarnell12@gmail.com"
-PASSWORD = "tompuppy"
+EMAIL = "email"
+PASSWORD = "password"
 
 agent = Mechanize.new
 
