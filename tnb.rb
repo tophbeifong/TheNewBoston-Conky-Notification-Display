@@ -29,7 +29,8 @@ when "post" then notification[2] = "Post"
 when "vide" then notification[2] = "Video"
 end
 
-file = File.read("./notification.log")
+
+file = File.read("#{File.dirname(__FILE__)}/notification.log")
 file_chars = file.split(" ")
 if file_chars[0].chop.to_i <= 10
   case file_chars[1].downcase
@@ -40,7 +41,7 @@ if file_chars[0].chop.to_i <= 10
   end
 end
 
-File.open("./notification.log", "w") do |file|
+File.open("#{File.dirname(__FILE__)}/notification.log", "w") do |file|
   file.puts notification[notification.length - 1]
 end
 
