@@ -6,8 +6,8 @@ require 'mechanize'
 # Between the quot's :)
 #
 
-EMAIL = "name@email.com"
-PASSWORD = "samplePassword"
+EMAIL = "peterarnell12@gmail.com"
+PASSWORD = "tompuppy"
 
 agent = Mechanize.new
 
@@ -45,6 +45,10 @@ File.open("./notification.log", "w") do |file|
 end
 
 for n in 0..notification.length - 2
-  print "#{notification[n].chomp("\n")} "
+  if n == 3
+    print "#{notification[n][0..15]}..."
+  else
+    print "#{notification[n].chomp("\n")} "
+  end
 end
 print "."
