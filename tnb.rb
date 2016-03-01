@@ -46,7 +46,7 @@ end
 
 for n in 0..notification.length - 2
   if n == 3
-    print "#{notification[n][0..15]}..."
+    print "#{notification[n][0..15]}.."
   else
     print "#{notification[n].chomp("\n")} "
   end
